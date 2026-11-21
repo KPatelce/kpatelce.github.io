@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-03 quarry: SQL query engine pipeline</title>
+<desc>Blueprint schematic of the quarry pipeline: SQL text through lexer, parser, binder, optimizer rules, physical planner and Arrow operators over memory, CSV and Parquet, with catalog statistics and two key numbers.</desc>
+<defs>
+<style>
+.t{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:10px;letter-spacing:.06em;fill:#ffffff}
+.s{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#ffffff;fill-opacity:.7}
+.k{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:18px;letter-spacing:.06em;fill:#FF6B6B}
+.r{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:10px;letter-spacing:.06em;fill:#FF6B6B}
+</style>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#ffffff" stroke-opacity="0.05"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity="0.09"/></pattern>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffffff" fill-opacity="0.7"/></marker>
+<marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#FF6B6B"/></marker>
+</defs>
+<rect x="0" y="0" width="640" height="360" fill="#0a0e27"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#mn)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="22" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1"/>
+<text x="26" y="31" class="t">PN-03 · QUARRY · SQL ENGINE PIPELINE</text>
+
+<rect x="16" y="60" width="84" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="58" y="86" class="t" text-anchor="middle">SQL TEXT</text>
+<rect x="124" y="60" width="76" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="162" y="86" class="t" text-anchor="middle">LEXER</text>
+<rect x="224" y="60" width="116" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="282" y="80" class="t" text-anchor="middle">PARSER</text>
+<text x="282" y="94" class="s" text-anchor="middle">RECURSIVE DESCENT</text>
+<rect x="364" y="60" width="116" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="422" y="80" class="t" text-anchor="middle">BINDER</text>
+<text x="422" y="94" class="s" text-anchor="middle">SCOPES · TYPES</text>
+
+<line x1="100" y1="82" x2="124" y2="82" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ak)"/>
+<line x1="200" y1="82" x2="224" y2="82" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ak)"/>
+<line x1="340" y1="82" x2="364" y2="82" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ak)"/>
+
+<rect x="500" y="60" width="124" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="512" y="83" class="k">22</text>
+<text x="512" y="97" class="s">TPC-H-LIKE QUERIES</text>
+<rect x="500" y="136" width="124" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="512" y="159" class="k">93</text>
+<text x="512" y="173" class="s">FEATURE QUERIES</text>
+
+<rect x="16" y="136" width="404" height="144" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="26" y="150" class="t">OPTIMIZER RULES</text>
+<rect x="32" y="158" width="200" height="18" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="132" y="170" class="t" text-anchor="middle">CONSTANT FOLDING</text>
+<rect x="32" y="182" width="200" height="18" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="132" y="194" class="t" text-anchor="middle">PREDICATE PUSHDOWN</text>
+<rect x="32" y="206" width="200" height="18" fill="#0a0e27" stroke="#FF6B6B" stroke-width="1"/>
+<text x="132" y="218" class="r" text-anchor="middle">JOIN REORDER (DPSUB)</text>
+<rect x="32" y="230" width="200" height="18" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="132" y="242" class="t" text-anchor="middle">PROJECTION PUSHDOWN</text>
+<rect x="32" y="254" width="200" height="18" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="132" y="266" class="t" text-anchor="middle">LIMIT TO TOP-K</text>
+
+<rect x="440" y="190" width="184" height="50" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="532" y="211" class="t" text-anchor="middle">CATALOG + STATS</text>
+<text x="532" y="227" class="s" text-anchor="middle">TABLES · COLUMN STATS</text>
+<text x="300" y="209" class="s">STATS TO COST</text>
+
+<line x1="440" y1="215" x2="234" y2="215" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="470" y1="190" x2="470" y2="104" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="400" y1="104" x2="400" y2="136" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ak)"/>
+
+<rect x="16" y="296" width="134" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="83" y="322" class="t" text-anchor="middle">PHYSICAL PLANNER</text>
+<rect x="176" y="296" width="224" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="288" y="314" class="t" text-anchor="middle">ARROW OPERATORS</text>
+<text x="288" y="329" class="s" text-anchor="middle">HASH JOIN · AGG · SORT · TOP-K</text>
+<rect x="424" y="296" width="200" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
+<text x="524" y="322" class="t" text-anchor="middle">MEMORY · CSV · PARQUET</text>
+
+<line x1="83" y1="280" x2="83" y2="296" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ak)"/>
+<line x1="150" y1="318" x2="176" y2="318" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ak)"/>
+<line x1="424" y1="318" x2="400" y2="318" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1" marker-end="url(#ar)"/>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-01 gatekeep request flow</title>
+<desc>Browser to router, OIDC PKCE login, encrypted session cookie, posture store, CEL policy, hash-chained audit log, reverse proxy to upstream with signed identity assertion.</desc>
+<defs>
+<style>.t{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacing:.06em}.l{font-size:10px}.s{font-size:9px}</style>
+<pattern id="m" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern>
+<pattern id="M" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#fff" stroke-opacity=".09"/></pattern>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#fff" fill-opacity=".8"/></marker>
+<marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#FF6B6B"/></marker>
+</defs>
+
+<rect width="640" height="360" fill="#0a0e27"/>
+<rect width="640" height="360" fill="url(#m)"/>
+<rect width="640" height="360" fill="url(#M)"/>
+
+<rect x="16" y="16" width="608" height="24" fill="none" stroke="#fff" stroke-opacity=".5"/>
+<text x="28" y="32" class="t l" fill="#fff">PN-01 · GATEKEEP · IDENTITY-AWARE REVERSE PROXY</text>
+
+<rect x="150" y="64" width="330" height="226" fill="none" stroke="#fff" stroke-opacity=".5"/>
+<text x="162" y="80" class="t l" fill="#fff">GATEKEEP</text>
+<text x="470" y="80" class="t s" fill="#fff" fill-opacity=".7" text-anchor="end">TRUST BOUNDARY</text>
+
+<g fill="#0a0e27" stroke="#fff" stroke-opacity=".6">
+<rect x="16" y="64" width="100" height="44"/>
+<rect x="16" y="150" width="100" height="44"/>
+<rect x="166" y="96" width="110" height="28"/>
+<rect x="166" y="140" width="110" height="28"/>
+<rect x="166" y="184" width="110" height="28"/>
+<rect x="330" y="96" width="130" height="28"/>
+<rect x="330" y="140" width="130" height="28"/>
+<rect x="330" y="184" width="130" height="28"/>
+<rect x="330" y="228" width="130" height="28"/>
+<rect x="500" y="64" width="124" height="44"/>
+<rect x="500" y="170" width="124" height="44"/>
+</g>
+
+<text x="24" y="82" class="t l" fill="#fff">BROWSER</text>
+<text x="24" y="98" class="t s" fill="#fff" fill-opacity=".7">user agent</text>
+<text x="24" y="168" class="t l" fill="#fff">POSTURE AGENT</text>
+<text x="24" y="184" class="t s" fill="#fff" fill-opacity=".7">Ed25519 device key</text>
+<text x="174" y="114" class="t l" fill="#fff">ROUTER</text>
+<text x="174" y="158" class="t l" fill="#fff">SESSION COOKIE</text>
+<text x="174" y="202" class="t l" fill="#fff">POSTURE STORE</text>
+<text x="338" y="114" class="t l" fill="#fff">OIDC RP</text>
+<text x="338" y="158" class="t l" fill="#fff">CEL POLICY</text>
+<text x="338" y="202" class="t l" fill="#fff">REVERSE PROXY</text>
+<text x="338" y="246" class="t l" fill="#fff">AUDIT LOG</text>
+<text x="510" y="82" class="t l" fill="#fff">OIDC IDP</text>
+<text x="510" y="98" class="t s" fill="#fff" fill-opacity=".7">gatekeep-idp</text>
+<text x="510" y="188" class="t l" fill="#fff">UPSTREAM</text>
+<text x="510" y="204" class="t s" fill="#fff" fill-opacity=".7">verifies assertion</text>
+
+<g fill="none" stroke="#fff" stroke-opacity=".7" marker-end="url(#a)">
+<path d="M116 86H140V110H166"/>
+<path d="M276 110H330"/>
+<path d="M221 124V140"/>
+<path d="M221 168V184"/>
+<path d="M116 172H141V198H166"/>
+<path d="M276 198H303V154H330"/>
+<path d="M395 168V184"/>
+<path d="M460 154H470V242H460"/>
+<path d="M460 104H500"/>
+</g>
+<text x="281" y="104" class="t s" fill="#fff" fill-opacity=".7">PKCE</text>
+
+<path d="M460 198H500" fill="none" stroke="#FF6B6B" stroke-width="1" marker-end="url(#r)"/>
+
+<g fill="#0a0e27" stroke="#FF6B6B" stroke-opacity=".8">
+<rect x="166" y="262" width="92" height="20"/>
+<rect x="266" y="262" width="92" height="20"/>
+<rect x="366" y="262" width="92" height="20"/>
+</g>
+<text x="174" y="276" class="t s" fill="#FF6B6B">AES-256-GCM</text>
+<text x="274" y="276" class="t s" fill="#FF6B6B">ES256</text>
+<text x="374" y="276" class="t s" fill="#FF6B6B">SHA-256</text>
+
+<path d="M16 326H40" fill="none" stroke="#FF6B6B" stroke-width="1"/>
+<text x="48" y="329" class="t s" fill="#fff" fill-opacity=".7">KEY PATH: SIGNED IDENTITY ASSERTION</text>
+<path d="M300 326H324" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1"/>
+<text x="332" y="329" class="t s" fill="#fff" fill-opacity=".7">REQUEST FLOW</text>
+</svg>

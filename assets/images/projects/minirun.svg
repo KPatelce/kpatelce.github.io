@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-07 minirun launch pipeline</title>
+<desc>Parent process builds a launch plan, re-executes into new namespaces, and the child sets up the root filesystem, drops privileges, applies seccomp and calls execve.</desc>
+<defs>
+<style>text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:.06em;fill:#ffffff}.m{font-size:10px}.s{fill-opacity:.7}.a{fill:#FF6B6B}.n{font-size:12px}.l{fill:#0a0e27;stroke:#ffffff;stroke-opacity:.6;stroke-width:1}.c{fill:none;stroke:#ffffff;stroke-opacity:.4;stroke-width:1}.k{fill:#0a0e27;stroke:#FF6B6B;stroke-opacity:.8;stroke-width:1}</style>
+<pattern id="g16" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="g80" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ffffff" fill-opacity="0.7"/></marker>
+<marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#FF6B6B"/></marker>
+</defs>
+
+<rect width="640" height="360" fill="#0a0e27"/>
+<rect width="640" height="360" fill="url(#g16)"/>
+<rect width="640" height="360" fill="url(#g80)"/>
+
+<rect x="16" y="16" width="608" height="24" class="l"/>
+<text x="28" y="32" class="m">PN-07 · MINIRUN · <tspan class="a">LAUNCH PIPELINE &amp; ISOLATION</tspan></text>
+
+<rect x="16" y="52" width="270" height="250" class="c"/>
+<text x="28" y="66" class="s">PARENT · HOST NAMESPACES</text>
+<rect x="330" y="52" width="278" height="250" class="c"/>
+<text x="342" y="66" class="s">CONTAINER NAMESPACES · PID 1</text>
+
+<rect x="32" y="82" width="116" height="28" class="l"/>
+<text x="90" y="100" text-anchor="middle">RUNTIME</text>
+<rect x="32" y="128" width="116" height="28" class="l"/>
+<text x="90" y="146" text-anchor="middle">LAUNCH.BUILD</text>
+
+<rect x="164" y="84" width="108" height="26" class="l"/>
+<text x="218" y="101" text-anchor="middle">SPEC</text>
+<rect x="164" y="118" width="108" height="26" class="l"/>
+<text x="218" y="135" text-anchor="middle">SECCOMP→BPF</text>
+<rect x="164" y="152" width="108" height="26" class="l"/>
+<text x="218" y="169" text-anchor="middle">CAPS·MOUNTS</text>
+<rect x="164" y="186" width="108" height="26" class="l"/>
+<text x="218" y="203" text-anchor="middle">CGROUP SETTINGS</text>
+
+<g stroke="#ffffff" stroke-opacity="0.7" stroke-width="1" fill="none">
+<line x1="164" y1="97" x2="149" y2="142" marker-end="url(#ah)"/>
+<line x1="164" y1="131" x2="149" y2="142" marker-end="url(#ah)"/>
+<line x1="164" y1="165" x2="149" y2="142" marker-end="url(#ah)"/>
+<line x1="164" y1="199" x2="149" y2="142" marker-end="url(#ah)"/>
+<line x1="90" y1="110" x2="90" y2="128" marker-end="url(#ah)"/>
+<line x1="90" y1="156" x2="90" y2="222" marker-end="url(#ah)"/>
+<line x1="272" y1="236" x2="330" y2="236" stroke-dasharray="3 3" marker-end="url(#ah)"/>
+</g>
+
+<rect x="32" y="222" width="116" height="28" class="l"/>
+<text x="90" y="240" text-anchor="middle">STATE STORE</text>
+<rect x="164" y="222" width="108" height="28" class="l"/>
+<text x="218" y="240" text-anchor="middle">CGROUPS.MGR</text>
+
+<rect x="32" y="262" width="238" height="26" class="k"/>
+<text x="151" y="279" text-anchor="middle">LINUXLAUNCHER · CLONE(CLONE_NEW*)</text>
+
+<polyline points="270,275 300,275 300,90 346,90" fill="none" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ak)"/>
+
+<rect x="346" y="78" width="262" height="24" class="l"/>
+<text x="477" y="94" text-anchor="middle">SANDBOX.RUNINIT · PID 1</text>
+<rect x="346" y="114" width="262" height="24" class="l"/>
+<text x="477" y="130" text-anchor="middle">OVERLAY · MOUNTS · PIVOT_ROOT</text>
+<rect x="346" y="150" width="262" height="24" class="l"/>
+<text x="477" y="166" text-anchor="middle">HOSTNAME · LO · RLIMITS</text>
+<rect x="346" y="186" width="262" height="24" class="k"/>
+<text x="477" y="202" text-anchor="middle" class="a">DROP PRIVS · CAPSET · SECCOMP</text>
+<rect x="346" y="222" width="262" height="24" class="k"/>
+<text x="477" y="238" text-anchor="middle" class="a">EXECVE(PROCESS.ARGS)</text>
+
+<g stroke="#ffffff" stroke-opacity="0.7" stroke-width="1">
+<line x1="477" y1="102" x2="477" y2="114" marker-end="url(#ah)"/>
+<line x1="477" y1="138" x2="477" y2="150" marker-end="url(#ah)"/>
+<line x1="477" y1="174" x2="477" y2="186" marker-end="url(#ah)"/>
+<line x1="477" y1="210" x2="477" y2="222" marker-end="url(#ah)"/>
+</g>
+
+<rect x="346" y="262" width="128" height="24" class="k"/>
+<text x="354" y="278"><tspan class="a n">7</tspan> SECCOMP ARG OPS</text>
+<rect x="482" y="262" width="124" height="24" class="k"/>
+<text x="490" y="278"><tspan class="a n">3</tspan> HANDOFF FDS</text>
+</svg>

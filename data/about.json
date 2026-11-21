@@ -1,0 +1,20 @@
+{
+  "paragraphs": [
+    "I am a technical lead who works across the stack: Java, J2EE and Spring Boot services, React frontends, and the AWS infrastructure they run on.",
+    "I also build systems projects in Go, Rust and Python in my own time. They include an identity-aware proxy, a SQL query engine and a Kubernetes operator."
+  ],
+  "highlights": [
+    {
+      "label": "Focus",
+      "value": "Full-stack Java, React and AWS"
+    },
+    {
+      "label": "Current role",
+      "value": "Manager, Senior DevOps Engineer, The Coca-Cola Company"
+    },
+    {
+      "label": "Degree",
+      "value": "MS Computer Science, Kennesaw State"
+    }
+  ]
+}

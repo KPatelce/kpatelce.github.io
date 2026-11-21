@@ -1,0 +1,236 @@
+{
+  "projects": [
+    {
+      "name": "gatekeep",
+      "category": "Security / Identity proxy",
+      "description": "A BeyondCorp-style identity-aware reverse proxy in Go. Every request is authorized on who is calling, from what device and what it asks for, using OIDC with PKCE and CEL policies.",
+      "highlights": [
+        "Strict ID-token validation, AES-256-GCM encrypted session cookies and a hash-chained audit log.",
+        "Ships a minimal OIDC provider, a posture agent and an offline end-to-end demo."
+      ],
+      "technologies": [
+        "Go",
+        "OIDC",
+        "PKCE",
+        "CEL",
+        "AES-256-GCM",
+        "ES256"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/gatekeep"
+      },
+      "image": "assets/images/projects/gatekeep.svg",
+      "hero": {
+        "src": "assets/images/projects/gatekeep-hero.jpg",
+        "alt": "gatekeep — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "previewd",
+      "category": "Cloud / Kubernetes",
+      "description": "A Kubernetes controller that builds an ephemeral preview namespace per pull request from signed GitHub webhooks. It cleans up on close or TTL expiry.",
+      "highlights": [
+        "Each namespace gets a ResourceQuota, LimitRange, NetworkPolicies, Pod Security labels and a TTL label.",
+        "Tested against a real kube-apiserver with envtest and run offline in a demo."
+      ],
+      "technologies": [
+        "Go",
+        "Kubernetes",
+        "controller-runtime",
+        "envtest",
+        "GitHub webhooks",
+        "Prometheus"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/previewd"
+      },
+      "image": "assets/images/projects/previewd.svg",
+      "hero": {
+        "src": "assets/images/projects/previewd-hero.jpg",
+        "alt": "previewd — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "quarry",
+      "category": "Databases / Query engine",
+      "description": "A vectorized SQL query engine over Apache Arrow, written from scratch in Rust. It includes a parser, typed binder, rule-based optimizer, hash join and hash aggregate.",
+      "highlights": [
+        "All 22 TPC-H-like queries, 93 feature queries and thousands of random queries return the same rows as SQLite.",
+        "Join reordering by estimated cardinality: DPsub up to 10 relations, greedy beyond."
+      ],
+      "technologies": [
+        "Rust",
+        "Apache Arrow",
+        "SQL",
+        "Parquet",
+        "CSV",
+        "SQLite"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/quarry"
+      },
+      "image": "assets/images/projects/quarry.svg",
+      "hero": {
+        "src": "assets/images/projects/quarry-hero.jpg",
+        "alt": "quarry — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "swimring",
+      "category": "Distributed systems",
+      "description": "A from-scratch Go implementation of SWIM gossip membership with Lifeguard, a consistent-hash ring and a quorum-replicated cache. It runs over UDP or a deterministic network simulator.",
+      "highlights": [
+        "N/W/R quorum replication (3/2/2) with last-writer-wins, read repair and hand-off.",
+        "No dependencies outside the Go standard library; coverage gate of 80% or more."
+      ],
+      "technologies": [
+        "Go",
+        "SWIM",
+        "Lifeguard",
+        "Consistent hashing",
+        "UDP",
+        "Network simulation"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/swimring"
+      },
+      "image": "assets/images/projects/swimring.svg",
+      "hero": {
+        "src": "assets/images/projects/swimring-hero.jpg",
+        "alt": "swimring — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "tailsample",
+      "category": "Observability",
+      "description": "A tail-based trace sampler in Rust that receives spans over OTLP/gRPC and HTTP. It buffers them in bounded memory, decides with ordered policies and exports the traces it keeps.",
+      "highlights": [
+        "Nine policy kinds, including composite policies with per-policy span budgets.",
+        "Backpressure through retryable OTLP errors instead of unbounded buffering."
+      ],
+      "technologies": [
+        "Rust",
+        "OpenTelemetry",
+        "OTLP",
+        "gRPC",
+        "Tokio",
+        "Prometheus"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/tailsample"
+      },
+      "image": "assets/images/projects/tailsample.svg",
+      "hero": {
+        "src": "assets/images/projects/tailsample-hero.jpg",
+        "alt": "tailsample — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "sigmaforge",
+      "category": "Developer tools / Security",
+      "description": "A Sigma detection-rule compiler in Python. It parses rules into a typed expression tree and renders Splunk SPL, Elastic EQL, Microsoft KQL and SQLite SQL.",
+      "highlights": [
+        "The SQL backend is checked against a reference evaluator by property-based differential tests.",
+        "684 tests plus mypy --strict and a coverage gate in the check target."
+      ],
+      "technologies": [
+        "Python 3.12",
+        "Splunk SPL",
+        "Elastic EQL",
+        "KQL",
+        "SQLite",
+        "YAML"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/sigmaforge"
+      },
+      "image": "assets/images/projects/sigmaforge.svg",
+      "hero": {
+        "src": "assets/images/projects/sigmaforge-hero.jpg",
+        "alt": "sigmaforge — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "minirun",
+      "category": "Systems / Containers",
+      "description": "A minimal OCI-style Linux container runtime in Go. It builds containers from namespaces, cgroup v2, overlayfs, pivot_root, capabilities and a seccomp BPF compiler.",
+      "highlights": [
+        "Seccomp profiles compile to classic BPF in pure Go for x86-64 and arm64.",
+        "Lifecycle commands: run, exec, ps, kill and delete."
+      ],
+      "technologies": [
+        "Go",
+        "Linux namespaces",
+        "cgroup v2",
+        "overlayfs",
+        "seccomp",
+        "OCI"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/minirun"
+      },
+      "image": "assets/images/projects/minirun.svg",
+      "hero": {
+        "src": "assets/images/projects/minirun-hero.jpg",
+        "alt": "minirun — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "marginbridge",
+      "category": "Data analysis",
+      "description": "A price-volume-mix margin bridge plus price elasticity estimated against discount confounding. It is scored against a synthetic ground truth.",
+      "highlights": [
+        "The bridge reconciles exactly, with any residue reported as its own component.",
+        "In the demo, the corrected elasticity intervals cover the true value in every segment."
+      ],
+      "technologies": [
+        "Python",
+        "OLS regression",
+        "Elasticity",
+        "Synthetic data",
+        "Unit testing"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/marginbridge"
+      },
+      "image": "assets/images/projects/marginbridge.svg",
+      "hero": {
+        "src": "assets/images/projects/marginbridge-hero.jpg",
+        "alt": "marginbridge — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "surgecapacity",
+      "category": "Simulation / Operations",
+      "description": "A discrete-event simulation of emergency department staffing. It reports p95 wait and breach probability across triage levels and demand surges, instead of the mean.",
+      "highlights": [
+        "A demand-shaped roster with the same 1,512 clinician-hours cut p95 wait from 4.42h to 2.05h.",
+        "Simulator validated against closed-form M/M/c results."
+      ],
+      "technologies": [
+        "Python",
+        "Discrete-event simulation",
+        "Poisson arrivals",
+        "M/M/c",
+        "Unit testing"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/surgecapacity"
+      },
+      "image": "assets/images/projects/surgecapacity.svg",
+      "hero": {
+        "src": "assets/images/projects/surgecapacity-hero.jpg",
+        "alt": "surgecapacity — Concept render",
+        "caption": "Concept render"
+      }
+    }
+  ]
+}

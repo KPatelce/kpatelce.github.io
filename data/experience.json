@@ -1,0 +1,71 @@
+{
+  "roles": [
+    {
+      "company": "The Coca-Cola Company",
+      "logo": "assets/images/logos/the-coca-cola-company.svg",
+      "title": "Manager, Senior DevOps Engineer",
+      "start": "May 2023",
+      "end": "Present",
+      "location": "GA",
+      "highlights": [
+        "Led technical implementation across development initiatives, conducting code reviews and establishing development standards aligned with engineering best practices.",
+        "Monitored delivery and application performance, identifying risks, resolving development and deployment issues, and optimizing AWS infrastructure for scalability, reliability and cost efficiency.",
+        "Developed and maintained enterprise Java applications using Java, J2EE and OOP principles, contributing to architecture, technical design and hands-on development.",
+        "Built responsive frontend components with React, JSX, HTML, CSS and JavaScript."
+      ],
+      "technologies": [
+        "Java",
+        "J2EE",
+        "AWS",
+        "EC2",
+        "S3",
+        "Lambda",
+        "React",
+        "JSX",
+        "JavaScript",
+        "SDLC"
+      ]
+    },
+    {
+      "company": "Blackstone Technologies, LLC",
+      "title": "Java Developer",
+      "start": "February 2023",
+      "end": "April 2023",
+      "location": "OH",
+      "highlights": [
+        "Designed and implemented Java-based application components using object-oriented principles, aligned with business requirements.",
+        "Developed application features and backend components, supporting implementation, debugging and enhancements.",
+        "Prepared technical design and application support documentation."
+      ],
+      "technologies": [
+        "Java",
+        "Object-Oriented Programming"
+      ]
+    },
+    {
+      "company": "Hexaware Technologies",
+      "logo": "assets/images/logos/hexaware-technologies.png",
+      "title": "Java Developer",
+      "start": "January 2018",
+      "end": "November 2020",
+      "location": "India",
+      "highlights": [
+        "Designed enterprise web components using Java, J2EE, JSP, Servlets, HTML5, CSS and JavaScript.",
+        "Implemented backend business logic with Spring MVC, Spring Boot and Hibernate, and developed RESTful web services using XML and JSON.",
+        "Implemented authentication and authorization with Spring Security and OAuth 2.0 for secure access and resource protection.",
+        "Wrote JUnit test cases and developed SQL queries and stored procedures on MySQL and PostgreSQL."
+      ],
+      "technologies": [
+        "Java",
+        "J2EE",
+        "Spring Boot",
+        "Spring MVC",
+        "Hibernate",
+        "Spring Security",
+        "OAuth 2.0",
+        "MySQL",
+        "PostgreSQL"
+      ]
+    }
+  ]
+}

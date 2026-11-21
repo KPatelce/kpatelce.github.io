@@ -1,0 +1,42 @@
+{
+  "name": "Kashish Patel",
+  "title": "Senior Full-Stack Software Engineer | Java, React, AWS",
+  "summary": "Technical lead with 6+ years of experience in enterprise software engineering and cloud-based deployment. I build Java and Spring Boot backends, React frontends and secure REST APIs, and I run them on AWS.",
+  "location": "GA, USA",
+  "photo": {
+    "src": "assets/images/kashish-patel.jpg",
+    "alt": "Portrait of Kashish Patel"
+  },
+  "readouts": [
+    {
+      "value": "6+ yrs",
+      "label": "in software engineering"
+    },
+    {
+      "value": "2",
+      "label": "certifications: OCJP and RHCSA"
+    }
+  ],
+  "ctas": [
+    {
+      "label": "View projects",
+      "href": "#projects",
+      "kind": "primary"
+    },
+    {
+      "label": "Résumé",
+      "href": "assets/files/kashish-patel-resume.pdf",
+      "kind": "resume"
+    },
+    {
+      "label": "Get in touch",
+      "href": "#contact",
+      "kind": "secondary"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/KPatelce",
+    "email": "kashish.patel@belvionus.com",
+    "phone": "404-725-3959"
+  }
+}

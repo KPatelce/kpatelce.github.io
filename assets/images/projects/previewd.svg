@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-02 previewd: PR-scoped preview environment controller schematic</title>
+<desc>Blueprint schematic: GitHub pull_request webhook feeds a webhook receiver, intake and PreviewEnvironment spec into the kube-apiserver. The reconciler uses a pure lifecycle state machine, a renderer, an SCM reporter and an orphan collector. Readouts: 11 objects per namespace, 72h default TTL, 1 namespace per PR.</desc>
+<defs>
+<style>
+.t{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;font-size:9px;letter-spacing:0.06em;fill:#ffffff}
+.h{font-size:10px}
+.n{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;font-size:11px;letter-spacing:0.06em;fill:#FF6B6B}
+.s{fill-opacity:0.7}
+.b{fill:#0a0e27;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1}
+.w{fill:none;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1}
+</style>
+<pattern id="g" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0H0V16" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+</pattern>
+<pattern id="m" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0L8 4L0 8z" fill="#ffffff" fill-opacity="0.8"/>
+</marker>
+<marker id="r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0L8 4L0 8z" fill="#FF6B6B"/>
+</marker>
+</defs>
+
+<rect x="0" y="0" width="640" height="360" fill="#0a0e27"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#g)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#m)"/>
+
+<rect x="16" y="16" width="608" height="24" class="w"/>
+<text class="t h" x="28" y="32">PN-02 · PREVIEWD · PR-SCOPED PREVIEW ENVIRONMENT CONTROLLER</text>
+
+<rect x="168" y="56" width="300" height="216" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4 3"/>
+<text class="t s" x="178" y="70">PREVIEWD</text>
+
+<rect x="16" y="216" width="120" height="52" class="b"/>
+<text class="t h" x="76" y="238" text-anchor="middle">GITHUB</text>
+<text class="t s" x="76" y="252" text-anchor="middle">PULL_REQUEST</text>
+
+<rect x="184" y="80" width="112" height="40" class="b"/>
+<text class="t" x="240" y="97" text-anchor="middle">WEBHOOK RECEIVER</text>
+<text class="t s" x="240" y="111" text-anchor="middle">HMAC · DEDUPE</text>
+
+<rect x="184" y="140" width="112" height="40" class="b"/>
+<text class="t h" x="240" y="157" text-anchor="middle">INTAKE</text>
+<text class="t s" x="240" y="171" text-anchor="middle">UPSERT SPEC</text>
+
+<rect x="184" y="194" width="112" height="36" class="b"/>
+<text class="t" x="240" y="210" text-anchor="middle">ORPHAN COLLECTOR</text>
+<text class="t s" x="240" y="224" text-anchor="middle">GC NAMESPACES</text>
+
+<rect x="320" y="80" width="132" height="36" class="b"/>
+<text class="t h" x="386" y="95" text-anchor="middle">RECONCILER</text>
+<text class="t s" x="386" y="109" text-anchor="middle">LEVEL-TRIGGERED</text>
+
+<rect x="320" y="130" width="132" height="30" class="b"/>
+<text class="t" x="386" y="143" text-anchor="middle">LIFECYCLE.DECIDE</text>
+<text class="t s" x="386" y="155" text-anchor="middle">PURE STATE MACHINE</text>
+
+<rect x="320" y="176" width="132" height="30" class="b"/>
+<text class="t" x="386" y="189" text-anchor="middle">RENDERER</text>
+<text class="t s" x="386" y="201" text-anchor="middle">TEMPLATES · GUARDS</text>
+
+<rect x="320" y="222" width="132" height="30" class="b"/>
+<text class="t" x="386" y="235" text-anchor="middle">SCM REPORTER</text>
+<text class="t s" x="386" y="247" text-anchor="middle">COMMIT STATUS</text>
+
+<rect x="480" y="80" width="144" height="36" class="b"/>
+<text class="t h" x="492" y="95">PROMETHEUS</text>
+<text class="t s" x="492" y="109">/METRICS SCRAPE</text>
+
+<rect x="184" y="292" width="296" height="40" class="b"/>
+<text class="t h" x="332" y="309" text-anchor="middle">KUBE-APISERVER</text>
+<text class="t s" x="332" y="323" text-anchor="middle">PREVIEWENVIRONMENT · NAMESPACE · NETPOL</text>
+
+<rect x="480" y="140" width="144" height="36" class="b"/>
+<text class="n" x="492" y="155">11</text>
+<text class="t s" x="492" y="169">OBJECTS PER NS</text>
+
+<rect x="480" y="186" width="144" height="36" class="b"/>
+<text class="n" x="492" y="201">72H</text>
+<text class="t s" x="492" y="215">DEFAULT TTL</text>
+
+<rect x="480" y="232" width="144" height="36" class="b"/>
+<text class="n" x="492" y="247">1</text>
+<text class="t s" x="492" y="261">NAMESPACE PER PR</text>
+
+<path d="M76 216L76 100L184 100" style="fill:none;stroke:#FF6B6B;stroke-width:1" marker-end="url(#r)"/>
+<line x1="240" y1="120" x2="240" y2="140" style="stroke:#ffffff;stroke-opacity:0.8;stroke-width:1" marker-end="url(#a)"/>
+<path d="M296 160H308V292" style="fill:none;stroke:#FF6B6B;stroke-width:1" marker-end="url(#r)"/>
+<path d="M240 230V292" style="fill:none;stroke:#ffffff;stroke-opacity:0.8;stroke-width:1" marker-end="url(#a)"/>
+<path d="M452 104H464V292" style="fill:none;stroke:#ffffff;stroke-opacity:0.8;stroke-width:1" marker-end="url(#a)"/>
+<line x1="386" y1="116" x2="386" y2="130" style="stroke:#ffffff;stroke-opacity:0.8;stroke-width:1" marker-end="url(#a)"/>
+<line x1="386" y1="160" x2="386" y2="176" style="stroke:#ffffff;stroke-opacity:0.8;stroke-width:1" marker-end="url(#a)"/>
+<line x1="386" y1="206" x2="386" y2="222" style="stroke:#ffffff;stroke-opacity:0.8;stroke-width:1" marker-end="url(#a)"/>
+<path d="M320 237H136" style="fill:none;stroke:#ffffff;stroke-opacity:0.8;stroke-width:1" marker-end="url(#a)"/>
+<path d="M452 88H480" style="fill:none;stroke:#ffffff;stroke-opacity:0.6;stroke-width:1;stroke-dasharray:3 3" marker-end="url(#a)"/>
+
+<text class="t s" x="16" y="304">RED = KEY PATH</text>
+<text class="t s" x="16" y="318">DASHED = METRICS</text>
+</svg>

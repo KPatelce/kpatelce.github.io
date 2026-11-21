@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en" data-kit-template="vibrant-portfolio" data-kit-featured-layout="split">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0e27" />
+    
+    
+    <link rel="stylesheet" href="assets/kit/kit.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700;1,900&amp;family=Poppins:wght@300;400;500;600&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/polish.css">
+    <link rel="stylesheet" href="assets/css/print.css" media="print" />
+    <script type="module" src="assets/kit/kit.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  
+<title>Kashish Patel | Senior Full-Stack Software Engineer</title>
+<meta name="description" content="Technical lead with 6+ years building Java, Spring Boot, React and AWS applications, from backend services and secure APIs to cloud deployment.">
+<meta name="author" content="Kashish Patel">
+<link rel="canonical" href="https://kpatelce.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Kashish Patel | Senior Full-Stack Software Engineer">
+<meta property="og:description" content="Technical lead with 6+ years building Java, Spring Boot, React and AWS applications, from backend services and secure APIs to cloud deployment.">
+<meta property="og:url" content="https://kpatelce.github.io/">
+<meta property="og:image" content="https://kpatelce.github.io/assets/images/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kashish Patel | Senior Full-Stack Software Engineer">
+<meta name="twitter:description" content="Technical lead with 6+ years building Java, Spring Boot, React and AWS applications, from backend services and secure APIs to cloud deployment.">
+<meta name="twitter:image" content="https://kpatelce.github.io/assets/images/social-card.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Kashish Patel","jobTitle":"Senior Full-Stack Software Engineer | Java, React, AWS","url":"https://kpatelce.github.io/","image":"https://kpatelce.github.io/assets/images/kashish-patel.jpg","email":"kashish.patel@belvionus.com","sameAs":["https://github.com/KPatelce"]}</script>
+</head>
+  <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+
+    <!-- The nav floats over the night as one glass capsule: the gradient monogram, the first
+         name, the sections, and Contact as the bright pill at the end -->
+    <header class="nav-shell" id="nav">
+      <div class="capsule">
+        <a class="brand" href="#top">
+          <span class="brand-mark js-initials" aria-hidden="true"></span>
+          <span class="brand-name js-first" aria-hidden="true"></span>
+          <span class="sr-only" data-kit-text="hero.name"></span>
+        </a>
+        <nav class="nav" aria-label="Sections">
+          <ul class="menu" id="menu" data-kit="nav"></ul>
+        </nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="Menu"
+        >
+          <span data-kit="icon" data-icon="menu"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <!-- Hero: a centred poster under coral and teal light. The portrait sits in a gradient
+           ring; without one the name carries the poster on its own -->
+      <section id="hero" class="hero" data-kit-section="hero" aria-label="Introduction">
+        <div class="hero-light" aria-hidden="true"></div>
+        <div class="wrap hero-inner js-hero">
+          <div class="portrait js-portrait">
+            <span class="portrait-ring" aria-hidden="true"></span>
+            <figure class="portrait-frame" data-kit="hero-photo"></figure>
+          </div>
+          <p class="hero-where">
+            <span data-kit="icon" data-icon="map-pin"></span>
+            <span data-kit-text="hero.location"></span>
+          </p>
+          <h1 class="hero-name js-name" data-kit-text="hero.name"></h1>
+          <p class="hero-role"><span class="js-typed" data-kit-text="hero.title"></span></p>
+          <p class="hero-summary" data-kit-text="hero.summary"></p>
+          <div class="hero-ctas" data-kit="ctas"></div>
+          <div class="hero-social" data-kit="social"></div>
+          <div class="stats" data-kit="readouts"></div>
+        </div>
+      </section>
+
+      <!-- Projects come first: featured work in spotlights (the picture beside the story), the
+           rest in a grid that always closes its last row -->
+      <section
+        id="projects"
+        class="band band--projects"
+        data-kit-section="projects"
+        data-kit-label="Projects"
+      >
+        <div class="wrap">
+          <header class="head">
+            <p class="eyebrow">Projects</p>
+            <h2 class="title">Selected <em>work</em></h2>
+          </header>
+          <div class="spots" data-kit-list="featured">
+            <template>
+              <article class="spot">
+                <figure class="spot-media" data-kit="project-media"></figure>
+                <div class="spot-body">
+                  <p class="spot-meta">
+                    <span class="spot-num js-num" aria-hidden="true"></span>
+                    <span class="spot-cat" data-kit-field="category"></span>
+                  </p>
+                  <h3 class="spot-name" data-kit-field="name"></h3>
+                  <p class="spot-desc" data-kit-field="description"></p>
+                  <ul class="spot-points js-points" data-kit-each="highlights">
+                    <li></li>
+                  </ul>
+                  <div class="spot-foot">
+                    <ul class="pills" data-kit-each="technologies">
+                      <li></li>
+                    </ul>
+                    <div class="links" data-kit="project-links"></div>
+                  </div>
+                </div>
+              </article>
+            </template>
+          </div>
+          <h3 class="more-head js-more-head">More projects</h3>
+          <div class="works" data-kit-list="projects">
+            <template>
+              <article class="work">
+                <figure class="work-media" data-kit="project-media"></figure>
+                <div class="work-body">
+                  <p class="work-meta">
+                    <span class="work-num js-num" aria-hidden="true"></span>
+                    <span class="work-cat" data-kit-field="category"></span>
+                  </p>
+                  <h3 class="work-name" data-kit-field="name"></h3>
+                  <div class="work-text">
+                    <p class="work-desc" data-kit-field="description"></p>
+                    <ul class="work-points" data-kit-each="highlights">
+                      <li></li>
+                    </ul>
+                  </div>
+                  <div class="work-foot">
+                    <ul class="pills" data-kit-each="technologies">
+                      <li></li>
+                    </ul>
+                    <div class="links" data-kit="project-links"></div>
+                  </div>
+                </div>
+              </article>
+            </template>
+          </div>
+        </div>
+      </section>
+
+      <!-- The profile: the story on the left, the toolkit in a glass panel on the right; either
+           one alone takes the width -->
+      <div class="band band--profile js-profile-band">
+        <div class="wrap profile js-profile">
+          <section id="about" class="about" data-kit-section="about" data-kit-label="About">
+            <header class="head">
+              <p class="eyebrow">About</p>
+              <h2 class="title">The short <em>story</em></h2>
+            </header>
+            <div class="story" data-kit-list="paragraphs">
+              <template>
+                <p class="story-p"></p>
+              </template>
+            </div>
+            <dl class="facts" data-kit-list="highlights">
+              <template>
+                <div class="fact">
+                  <dt data-kit-field="label"></dt>
+                  <dd data-kit-field="value"></dd>
+                </div>
+              </template>
+            </dl>
+          </section>
+
+          <section id="skills" class="skills" data-kit-section="skills" data-kit-label="Skills">
+            <div class="toolkit">
+              <header class="head head--panel">
+                <p class="eyebrow">Skills</p>
+                <h2 class="title">The <em>toolkit</em></h2>
+              </header>
+              <div class="groups" data-kit-list="groups">
+                <template>
+                  <div class="group">
+                    <h3 class="group-name" data-kit-field="name"></h3>
+                    <ul class="pills" data-kit-each="items">
+                      <li></li>
+                    </ul>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Experience: the most recent role leads across the full width, the rest follow two by
+           two; a row left with one card gives it the full width -->
+      <section
+        id="experience"
+        class="band band--experience"
+        data-kit-section="experience"
+        data-kit-label="Experience"
+      >
+        <div class="wrap">
+          <header class="head">
+            <p class="eyebrow">Experience</p>
+            <h2 class="title">Where I have <em>worked</em></h2>
+          </header>
+          <ol class="roles" data-kit-list="roles">
+            <template>
+              <li class="role">
+                <div class="role-main">
+                  <div class="role-top">
+                    <div class="role-logo" data-kit="role-logo"></div>
+                    <span class="role-mono js-mono" aria-hidden="true"></span>
+                    <div class="role-id">
+                      <h3 class="role-title" data-kit-field="title"></h3>
+                      <p class="role-org">
+                        <a
+                          class="role-company"
+                          data-kit-field="company"
+                          data-kit-href="companyUrl"
+                        ></a>
+                      </p>
+                    </div>
+                  </div>
+                  <p class="role-when">
+                    <span class="role-now js-now">Now</span>
+                    <span class="role-dates" data-kit="role-dates"></span>
+                    <span class="role-where js-where">
+                      <span data-kit="icon" data-icon="map-pin"></span>
+                      <span data-kit-field="location"></span>
+                    </span>
+                  </p>
+                  <p class="role-desc" data-kit-field="description"></p>
+                  <div class="role-earlier js-earlier">
+                    <p class="earlier-label">Earlier at this company</p>
+                    <div class="earlier-list" data-kit="role-earlier"></div>
+                  </div>
+                </div>
+                <ul class="role-points" data-kit-each="highlights">
+                  <li></li>
+                </ul>
+                <ul class="pills role-tech" data-kit-each="technologies">
+                  <li></li>
+                </ul>
+              </li>
+            </template>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Education and certifications: cards that close every row, whatever the count -->
+      <div class="band band--creds js-creds-band">
+        <div class="wrap creds">
+          <section
+            id="education"
+            class="cred"
+            data-kit-section="education"
+            data-kit-label="Education"
+          >
+            <header class="head">
+              <p class="eyebrow">Education</p>
+              <h2 class="title">Where I <em>studied</em></h2>
+            </header>
+            <div class="edus" data-kit-list="entries">
+              <template>
+                <article class="edu">
+                  <span class="edu-icon" data-kit="icon" data-icon="graduation-cap"></span>
+                  <div class="edu-body">
+                    <p class="edu-when" data-kit="role-dates"></p>
+                    <h3 class="edu-degree">
+                      <span data-kit-field="degree"></span><span class="edu-sep">, </span
+                      ><span data-kit-field="field"></span>
+                    </h3>
+                    <p class="edu-inst">
+                      <span data-kit-field="institution"></span>
+                      <span class="edu-loc" data-kit-field="location"></span>
+                    </p>
+                    <ul class="edu-details" data-kit-each="details">
+                      <li></li>
+                    </ul>
+                  </div>
+                </article>
+              </template>
+            </div>
+          </section>
+
+          <section
+            id="certifications"
+            class="cred"
+            data-kit-section="certifications"
+            data-kit-label="Certifications"
+          >
+            <header class="head head--sm">
+              <p class="eyebrow">Certifications</p>
+              <h2 class="title">Credentials <em>earned</em></h2>
+            </header>
+            <ul class="certs" data-kit-list="items">
+              <template>
+                <li class="cert">
+                  <span class="cert-icon" data-kit="icon" data-icon="award"></span>
+                  <div class="cert-body">
+                    <a class="cert-name" data-kit-field="name" data-kit-href="url"></a>
+                    <p class="cert-meta">
+                      <span class="cert-issuer" data-kit-field="issuer"></span>
+                      <span class="cert-date" data-kit-field="date"></span>
+                    </p>
+                  </div>
+                </li>
+              </template>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <!-- Contact: the finale, centred over a sunrise of the same coral and teal light -->
+      <section id="contact" class="finale" data-kit-section="contact" data-kit-label="Contact">
+        <div class="wrap finale-inner">
+          <p class="eyebrow">Contact</p>
+          <h2 class="finale-title">Let&rsquo;s <em>talk</em></h2>
+          <p class="finale-intro" data-kit-text="contact.intro"></p>
+          <p class="finale-status">
+            <span class="pulse" aria-hidden="true"></span>
+            <span data-kit-text="contact.availability"></span>
+          </p>
+          <ul class="channels" data-kit="contact-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-inner">
+        <p class="foot-copy" data-kit="footer"></p>
+        <a class="foot-top" href="#top">
+          Back to top
+          <span data-kit="icon" data-icon="arrow-up-right"></span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

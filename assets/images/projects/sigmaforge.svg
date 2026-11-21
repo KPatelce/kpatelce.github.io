@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-06 sigmaforge schematic</title>
+<desc>Sigma YAML goes through a strict loader, detection items and a condition parser into an expression tree, pipelines and a simplifier, then four backends and a reference evaluator, checked by differential tests.</desc>
+<defs>
+<style>
+.t{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:9px;letter-spacing:.06em;fill:#fff;text-anchor:middle}
+.h{font-size:10px;text-anchor:start}
+.s{opacity:.7}
+.b{fill:#0a0e27;stroke:#fff;stroke-opacity:.6;stroke-width:1}
+.r{stroke:#FF6B6B;stroke-opacity:1}
+.k{fill:#FF6B6B}
+.l{fill:none;stroke:#fff;stroke-opacity:.6;stroke-width:1}
+.a{fill:none;stroke:#fff;stroke-opacity:.6;stroke-width:1}
+.ak{fill:none;stroke:#FF6B6B;stroke-width:1}
+</style>
+<pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0H0V16" fill="none" stroke="#fff" stroke-opacity=".05" stroke-width="1"/>
+</pattern>
+<pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M80 0H0V80" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="1"/>
+</pattern>
+<marker id="ar" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L10 5L0 10z" fill="#fff" fill-opacity=".8"/>
+</marker>
+<marker id="ak" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+<path d="M0 0L10 5L0 10z" fill="#FF6B6B"/>
+</marker>
+</defs>
+
+<rect x="0" y="0" width="640" height="360" fill="#0a0e27"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+
+<rect x="16" y="16" width="608" height="24" class="l"/>
+<text x="26" y="32" class="t h">PN-06 · SIGMAFORGE · SIGMA TO SIEM COMPILER</text>
+
+<rect x="16" y="70" width="120" height="30" class="b"/>
+<text x="76" y="83" class="t">SIGMA YAML</text>
+<text x="76" y="95" class="t s">rule file</text>
+
+<rect x="176" y="70" width="120" height="30" class="b"/>
+<text x="236" y="83" class="t">STRICT LOADER</text>
+<text x="236" y="95" class="t s">strict schema</text>
+
+<rect x="336" y="70" width="120" height="30" class="b"/>
+<text x="396" y="83" class="t">SIGMARULE</text>
+<text x="396" y="95" class="t s">typed model</text>
+
+<rect x="176" y="124" width="120" height="30" class="b"/>
+<text x="236" y="137" class="t">DETECTION ITEMS</text>
+<text x="236" y="149" class="t s">modifiers.py</text>
+
+<rect x="336" y="124" width="120" height="30" class="b"/>
+<text x="396" y="137" class="t">CONDITION PARSER</text>
+<text x="396" y="149" class="t s">condition.py</text>
+
+<rect x="336" y="178" width="120" height="30" class="b"/>
+<text x="396" y="191" class="t">EXPRESSION TREE</text>
+<text x="396" y="203" class="t s">ast.py</text>
+
+<rect x="336" y="222" width="120" height="30" class="b"/>
+<text x="396" y="235" class="t">PIPELINES</text>
+<text x="396" y="247" class="t s">pipeline.py</text>
+
+<rect x="336" y="266" width="120" height="30" class="b"/>
+<text x="396" y="279" class="t">SIMPLIFIER</text>
+<text x="396" y="291" class="t s">optimize.py</text>
+
+<rect x="480" y="70" width="144" height="26" class="b"/>
+<text x="552" y="86" class="t">SPLUNK SPL</text>
+
+<rect x="480" y="114" width="144" height="26" class="b"/>
+<text x="552" y="130" class="t">ELASTIC EQL</text>
+
+<rect x="480" y="158" width="144" height="26" class="b"/>
+<text x="552" y="174" class="t">MICROSOFT KQL</text>
+
+<rect x="480" y="202" width="144" height="26" class="b r"/>
+<text x="552" y="218" class="t k">SQLITE SQL</text>
+
+<rect x="480" y="246" width="144" height="26" class="b r"/>
+<text x="552" y="262" class="t k">DIFFERENTIAL TESTS</text>
+
+<rect x="480" y="290" width="144" height="26" class="b"/>
+<text x="552" y="306" class="t">REFERENCE EVALUATOR</text>
+
+<g class="a">
+<path d="M136 85H176" marker-end="url(#ar)"/>
+<path d="M296 85H336" marker-end="url(#ar)"/>
+<path d="M236 100V124" marker-end="url(#ar)"/>
+<path d="M396 100V124" marker-end="url(#ar)"/>
+<path d="M396 154V178" marker-end="url(#ar)"/>
+<path d="M236 154V193H336" marker-end="url(#ar)"/>
+<path d="M396 208V222" marker-end="url(#ar)"/>
+<path d="M396 252V266" marker-end="url(#ar)"/>
+<path d="M456 281H468"/>
+<path d="M468 83V303"/>
+<path d="M468 83H480" marker-end="url(#ar)"/>
+<path d="M468 127H480" marker-end="url(#ar)"/>
+<path d="M468 171H480" marker-end="url(#ar)"/>
+<path d="M468 215H480" marker-end="url(#ar)"/>
+<path d="M468 303H480" marker-end="url(#ar)"/>
+</g>
+
+<g class="ak">
+<path d="M552 228V246" marker-end="url(#ak)" stroke="#FF6B6B"/>
+<path d="M552 290V272" marker-end="url(#ak)" stroke="#FF6B6B"/>
+</g>
+
+<rect x="16" y="266" width="80" height="30" class="b"/>
+<text x="56" y="279" class="t k" font-size="11" font-weight="bold">684</text>
+<text x="56" y="291" class="t s">TESTS</text>
+
+<rect x="112" y="266" width="80" height="30" class="b"/>
+<text x="152" y="279" class="t" font-size="11" font-weight="bold">4</text>
+<text x="152" y="291" class="t s">BACKENDS</text>
+
+<text x="16" y="236" class="t" style="text-anchor:start">KEY PATH IN ACCENT</text>
+<text x="16" y="248" class="t s" style="text-anchor:start">SQL RESULTS CHECKED AGAINST EVALUATOR</text>
+</svg>

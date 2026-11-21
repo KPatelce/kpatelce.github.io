@@ -1,0 +1,83 @@
+{
+  "groups": [
+    {
+      "name": "Languages",
+      "items": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Backend",
+      "items": [
+        "Java/J2EE",
+        "Spring Boot",
+        "Spring MVC",
+        "Spring Security",
+        "Hibernate"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "items": [
+        "React",
+        "AngularJS",
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Cloud (AWS)",
+      "items": [
+        "AWS",
+        "EC2",
+        "S3",
+        "Lambda",
+        "RDS",
+        "VPC",
+        "IAM"
+      ]
+    },
+    {
+      "name": "DevOps & Automation",
+      "items": [
+        "Terraform",
+        "Ansible",
+        "Git",
+        "GitHub",
+        "CI/CD",
+        "Infrastructure as Code"
+      ]
+    },
+    {
+      "name": "Databases",
+      "items": [
+        "MySQL",
+        "PostgreSQL",
+        "Stored Procedures"
+      ]
+    },
+    {
+      "name": "Security & Testing",
+      "items": [
+        "OAuth 2.0",
+        "Role-Based Access Control",
+        "JUnit",
+        "Unit Testing"
+      ]
+    },
+    {
+      "name": "Engineering Practices",
+      "items": [
+        "SDLC",
+        "Agile",
+        "OOP",
+        "System Design",
+        "Performance Optimization"
+      ]
+    }
+  ]
+}

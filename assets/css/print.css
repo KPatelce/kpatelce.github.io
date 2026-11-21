@@ -1,0 +1,305 @@
+/* Vibrant Portfolio in print: everything visible, on white, without the nav, the light or the
+ * motion. Gradient text prints as solid ink, glass cards as ruled white boxes. */
+
+html,
+body {
+  background: #ffffff !important;
+  color: #1a1a2e;
+  font-size: 10.5pt;
+}
+
+.nav-shell,
+.skip-link,
+.motes,
+.hero-light,
+.hero-social,
+.foot-top,
+.portrait-ring,
+.caret,
+.pulse {
+  display: none !important;
+}
+
+.hero::before,
+.band::before,
+.finale::before,
+.spot-media::before {
+  display: none !important;
+}
+
+.reveal,
+.motion-ok .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* the typed role prints once, as its final text */
+.typed-final {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip-path: none;
+  white-space: normal;
+}
+
+.typed {
+  display: none !important;
+}
+
+.hero-role {
+  min-height: 0 !important;
+}
+
+/* gradient text becomes solid ink */
+.title em,
+.finale-title em,
+.name-rest,
+.kit-readout__value {
+  background: none !important;
+  color: #1a1a2e !important;
+  -webkit-text-fill-color: #1a1a2e;
+}
+
+.spot-num,
+.work-num,
+.work-tile span {
+  color: #1a1a2e !important;
+  -webkit-text-stroke: 0;
+}
+
+.hero,
+.band,
+.finale {
+  background: none !important;
+  min-height: 0;
+  padding-block: 18pt;
+  overflow: visible;
+}
+
+.hero {
+  padding-top: 0;
+}
+
+.hero-name,
+.name-first,
+.spot-cat,
+.work-cat,
+.finale-status,
+.foot-top,
+.title,
+.finale-title,
+.spot-name,
+.work-name,
+.role-title,
+.edu-degree,
+.group-name,
+.more-head,
+.brand-name,
+.kit-earlier__title,
+.cert-name,
+.fact dd,
+.story-p,
+.story-p:first-of-type,
+.hero-role,
+.hero-summary,
+.role-dates,
+.role-mono,
+.fig-open,
+.work-points > li,
+.spot-stage > li {
+  color: #1a1a2e !important;
+}
+
+.hero-summary,
+.story-p,
+.spot-desc,
+.work-desc,
+.role-desc,
+.spot-points,
+.work-points,
+.role-points,
+.edu-details,
+.edu-inst,
+.cert-issuer,
+.org,
+.role-org,
+.finale-intro,
+.pills > li,
+.hero-where,
+.kit-link,
+.ch-value {
+  color: #2b2b40 !important;
+}
+
+.kit-readout__label,
+.role-when,
+.edu-when,
+.edu-loc,
+.cert-meta,
+.earlier-label,
+.kit-earlier__dates,
+.foot-copy,
+.ch-label,
+.fig-cap,
+.kit-caption,
+.eyebrow,
+.fact dt {
+  color: #4a4a60 !important;
+}
+
+.spot,
+.work,
+.role,
+.role:first-of-type,
+.toolkit,
+.edu,
+.cert,
+.spot-stage,
+.work-tile,
+.channels .kit-contact,
+.finale-status,
+.hero-where,
+.pills > li,
+.kit-link,
+.kit-cta,
+.role-mono,
+.edu-icon,
+.cert-icon,
+.spot-cat,
+.work-cat,
+.portrait-frame .kit-caption {
+  border: 1pt solid #b8b8c8 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.spot::before,
+.work::before,
+.role::before,
+.edu::before,
+.cert::before,
+.toolkit::after,
+.spot-stage::after {
+  display: none !important;
+}
+
+.kit-cta,
+.kit-cta--primary,
+.role-now,
+.brand-mark,
+.menu .kit-nav__link[href='#contact'] {
+  background: #ffffff !important;
+  color: #1a1a2e !important;
+  border: 1pt solid #1a1a2e !important;
+  box-shadow: none !important;
+}
+
+.channels .kit-icon,
+.edu-icon,
+.cert-icon,
+.role-where .kit-icon,
+.hero-where .kit-icon,
+.kit-link .kit-icon {
+  background: #ffffff !important;
+  color: #1a1a2e !important;
+}
+
+.spot-points > li::before,
+.spot-stage > li::before,
+.work-points > li::before,
+.role-points > li::before,
+.edu-details > li::before,
+.group-name::before,
+.eyebrow::before,
+.finale .eyebrow::after {
+  background: #1a1a2e !important;
+  box-shadow: none !important;
+}
+
+.portrait {
+  margin-bottom: 18pt;
+}
+
+.portrait-frame img {
+  border-color: #ffffff;
+}
+
+/* a picture prints whole, and a card never splits across pages */
+.spot,
+.work,
+.role,
+.edu,
+.cert,
+.group,
+.fact,
+.channels > li {
+  break-inside: avoid;
+}
+
+.head,
+.more-head {
+  break-inside: avoid;
+  break-after: avoid;
+}
+
+.foot {
+  border-top: 1pt solid #b8b8c8;
+  background: #ffffff !important;
+}
+
+/* on paper a spotlight keeps its picture and its story side by side (the screen's narrow rules
+   would stack both into one column of a two-column grid) */
+.spot,
+.spot:nth-of-type(even) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+
+.spots > .spot:nth-of-type(n) > .spot-media,
+.spots > .spot:nth-of-type(n) > .media-pair,
+.spots > .spot:nth-of-type(n) > .spot-stage {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.spots > .spot:nth-of-type(n) > .spot-body {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.spots > .spot.is-plain:nth-of-type(n) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.spots > .spot.is-plain:nth-of-type(n) > .spot-body {
+  grid-column: 1;
+}
+
+.profile {
+  display: block;
+}
+
+.profile > section + section {
+  margin-top: 18pt;
+}
+
+.finale {
+  text-align: left;
+}
+
+.finale-inner {
+  align-items: flex-start;
+}
+
+.channels {
+  justify-content: flex-start;
+}
+
+.kit-contact::after,
+.kit-link::after {
+  content: none;
+}

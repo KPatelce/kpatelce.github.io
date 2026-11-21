@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "institution": "Kennesaw State University",
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "location": "Marietta, GA"
+    },
+    {
+      "institution": "Silver Oak University",
+      "degree": "Bachelor of Science",
+      "field": "Computer Engineering",
+      "location": "Gujarat, India"
+    }
+  ]
+}

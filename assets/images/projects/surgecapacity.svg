@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-09 surgecapacity schematic</title>
+<desc>Blueprint schematic: arrival profile and triage mix feed a thinned Poisson generator, which feeds a priority-queue simulation loop with a 168-hour roster. The loop outputs waits, breach and LWBS, checked by an analytic M/M/c module. Readouts show p95 4.42h flat, 2.05h shaped, and 1,512 clinician-hours.</desc>
+<defs>
+<style>text{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:0.06em;fill:#ffffff;text-transform:uppercase}</style>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="aw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ffffff" fill-opacity="0.7"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#FF6B6B"/></marker>
+</defs>
+<rect x="0" y="0" width="640" height="360" fill="#0a0e27"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#mn)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="28" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1"/>
+<text x="28" y="34" font-size="10">PN-09 · SURGECAPACITY · ED STAFFING SIMULATOR</text>
+
+<g fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1">
+<rect x="32" y="70" width="150" height="52"/>
+<rect x="32" y="150" width="150" height="52"/>
+<rect x="32" y="250" width="150" height="52"/>
+<rect x="236" y="70" width="170" height="52"/>
+<rect x="236" y="250" width="170" height="52"/>
+<rect x="460" y="150" width="148" height="52"/>
+</g>
+<rect x="236" y="150" width="170" height="52" fill="#0a0e27" stroke="#FF6B6B" stroke-opacity="0.8" stroke-width="1"/>
+
+<g text-anchor="middle">
+<text x="107" y="92" font-size="10">ARRIVAL PROFILE</text>
+<text x="107" y="108" font-size="9" fill-opacity="0.7">HOUR x DAY OF WEEK</text>
+<text x="107" y="172" font-size="10">ARRIVAL GENERATOR</text>
+<text x="107" y="188" font-size="9" fill-opacity="0.7">THINNED POISSON</text>
+<text x="107" y="272" font-size="10">TRIAGE MIX</text>
+<text x="107" y="288" font-size="9" fill-opacity="0.7">5 CATEGORIES</text>
+<text x="321" y="172" font-size="10">SIMULATION LOOP</text>
+<text x="321" y="188" font-size="9" fill-opacity="0.7">PRIORITY QUEUE</text>
+<text x="321" y="92" font-size="10">ANALYTIC M/M/C</text>
+<text x="321" y="108" font-size="9" fill-opacity="0.7">ERLANG C CHECK</text>
+<text x="321" y="272" font-size="10">168-HOUR ROSTER</text>
+<text x="321" y="288" font-size="9" fill-opacity="0.7">HOURLY CLINICIANS</text>
+<text x="534" y="172" font-size="10">RESULT</text>
+<text x="534" y="188" font-size="9" fill-opacity="0.7">WAITS · BREACH · LWBS</text>
+</g>
+
+<g stroke="#ffffff" stroke-opacity="0.7" stroke-width="1" fill="none">
+<line x1="107" y1="122" x2="107" y2="148" marker-end="url(#aw)"/>
+<line x1="107" y1="250" x2="107" y2="204" marker-end="url(#aw)"/>
+<line x1="182" y1="176" x2="234" y2="176" marker-end="url(#aw)"/>
+<line x1="321" y1="250" x2="321" y2="204" marker-end="url(#aw)"/>
+<line x1="321" y1="122" x2="321" y2="148" stroke-dasharray="4 3" marker-end="url(#aw)"/>
+</g>
+<line x1="406" y1="176" x2="458" y2="176" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ar)"/>
+<line x1="534" y1="202" x2="534" y2="220" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+
+<text x="460" y="96" font-size="9" fill="#FF6B6B">TAIL, NOT MEAN</text>
+<text x="460" y="112" font-size="9" fill-opacity="0.7">STAFF TO THE P95</text>
+
+<g stroke="#ffffff" stroke-opacity="0.6" stroke-width="1" fill="#0a0e27">
+<rect x="460" y="222" width="148" height="28"/>
+<rect x="460" y="256" width="148" height="28"/>
+<rect x="460" y="290" width="148" height="28"/>
+</g>
+<rect x="460" y="222" width="148" height="28" fill="none" stroke="#FF6B6B" stroke-width="1"/>
+<g font-size="9" text-anchor="middle">
+<text x="534" y="240" fill="#FF6B6B">P95 FLAT 4.42H</text>
+<text x="534" y="274">P95 SHAPED 2.05H</text>
+<text x="534" y="308">1,512 CLINICIAN-HOURS</text>
+</g>
+
+<text x="32" y="338" font-size="9" fill-opacity="0.7">ROSTER 168 H/WEEK · LWBS AFTER 6 H · FIXED SEED REPRODUCIBLE</text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "name": "Oracle Certified Java Programmer (OCJP)",
+      "issuer": "Oracle",
+      "date": "January 2018"
+    },
+    {
+      "name": "Red Hat Certified System Administrator (RHCSA)",
+      "issuer": "Red Hat",
+      "date": "January 2019"
+    }
+  ]
+}

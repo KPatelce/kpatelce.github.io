@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kpatelce.github.io/sitemap.xml

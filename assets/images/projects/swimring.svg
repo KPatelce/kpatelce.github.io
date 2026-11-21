@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-04 swimring schematic</title>
+<desc>Block diagram of a swimring node: cache, ring and SWIM layers above a transport mux, which runs over UDP or a simulated network. Readouts show quorum N/W/R 3/2/2 and an 80% coverage gate.</desc>
+<defs>
+<pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+<path d="M16 0 L0 0 0 16" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+</pattern>
+<pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+<path d="M80 0 L0 0 0 80" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1"/>
+</pattern>
+<marker id="ah" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+<path d="M0,0 L6,3 L0,6 z" fill="#ffffff" fill-opacity="0.8"/>
+</marker>
+<marker id="ahr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+<path d="M0,0 L6,3 L0,6 z" fill="#FF6B6B"/>
+</marker>
+</defs>
+<style>text{font-family:"IBM Plex Mono, SFMono-Regular, Consolas, monospace";font-size:10px;letter-spacing:0.06em;fill:#ffffff;text-transform:uppercase}</style>
+<rect x="0" y="0" width="640" height="360" fill="#0a0e27"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+<rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+
+<rect x="16" y="16" width="608" height="24" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1"/>
+<text x="28" y="32" font-size="10">PN-04 · SWIMRING · SWIM + LIFEGUARD MEMBERSHIP, RING &amp; QUORUM CACHE</text>
+
+<rect x="200" y="56" width="424" height="230" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-dasharray="4 3" stroke-width="1"/>
+<text x="212" y="72" font-size="9" fill-opacity="0.7">SWIMRING.NODE</text>
+
+<rect x="216" y="90" width="180" height="56" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+<text x="228" y="112">CACHE.NODE</text>
+<text x="228" y="128" font-size="9" fill-opacity="0.7">QUORUM · LWW · REPAIR</text>
+
+<rect x="432" y="90" width="176" height="56" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+<text x="444" y="112">RING.RING</text>
+<text x="444" y="128" font-size="9" fill-opacity="0.7">VIRTUAL NODES</text>
+
+<rect x="216" y="180" width="180" height="56" fill="#0a0e27" stroke="#FF6B6B" stroke-width="1"/>
+<text x="228" y="202">SWIM+LIFEGUARD</text>
+<text x="228" y="220" font-size="9" fill-opacity="0.7">PROBE · SUSPECT · GOSSIP</text>
+
+<rect x="432" y="180" width="176" height="24" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1"/>
+<text x="444" y="196" font-size="9">N/W/R <tspan fill="#FF6B6B">3/2/2</tspan></text>
+<rect x="432" y="212" width="176" height="24" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1"/>
+<text x="444" y="228" font-size="9">COVERAGE GATE <tspan fill="#FF6B6B">&#8805;80%</tspan></text>
+
+<rect x="216" y="252" width="384" height="24" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+<text x="228" y="268">TRANSPORT.MUX · 1-BYTE CHANNEL</text>
+
+<rect x="216" y="312" width="124" height="32" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+<text x="228" y="332">UDP SOCKET</text>
+<rect x="352" y="312" width="124" height="32" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+<text x="364" y="332">SIM.HOST</text>
+<rect x="488" y="312" width="120" height="32" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+<text x="500" y="332">SIM.NETWORK</text>
+
+<line x1="396" y1="118" x2="430" y2="118" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="306" y1="180" x2="306" y2="148" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ahr)"/>
+<text x="312" y="168" font-size="8" fill-opacity="0.7">EVENTS</text>
+<path d="M216 130 H208 V264 H215" fill="none" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="306" y1="236" x2="306" y2="251" stroke="#FF6B6B" stroke-width="1" marker-end="url(#ahr)"/>
+<line x1="260" y1="276" x2="260" y2="311" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="414" y1="276" x2="414" y2="311" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1" marker-end="url(#ah)"/>
+<line x1="476" y1="328" x2="487" y2="328" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1" marker-end="url(#ah)"/>
+</svg>
