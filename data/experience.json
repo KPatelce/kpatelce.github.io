@@ -28,6 +28,7 @@
     },
     {
       "company": "Blackstone Technologies, LLC",
+      "logo": "assets/images/logos/blackstone-technologies.png",
       "title": "Java Developer",
       "start": "February 2023",
       "end": "April 2023",
@@ -44,7 +45,7 @@
     },
     {
       "company": "Hexaware Technologies",
-      "logo": "assets/images/logos/hexaware-technologies.png",
+      "logo": "assets/images/logos/hexaware-technologies.svg",
       "title": "Java Developer",
       "start": "January 2018",
       "end": "November 2020",

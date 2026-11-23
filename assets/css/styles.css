@@ -1561,10 +1561,12 @@ main:focus {
   object-fit: contain;
 }
 
-/* a mark on a transparent ground gets a glass mount; a dark mark gets a pale one */
+/* a mark on a transparent ground gets a glass mount; a dark mark gets a pale one. The company
+   wordmarks are white, so the mount is an even-width plate that lines the roles up */
 .role-logo.is-open img {
-  width: 3.25rem;
-  padding: 0.45rem;
+  width: 10.5rem;
+  max-width: 100%;
+  padding: 0.75rem 1rem;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.06);
 }
