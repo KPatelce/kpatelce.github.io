@@ -1,6 +1,91 @@
 {
   "projects": [
     {
+      "name": "cloud-order-processing-system",
+      "category": "Cloud / Event-driven",
+      "description": "Event-driven order processing on Java 21 and Spring Boot 3.3: five services run a choreographed Kafka saga over DynamoDB, with a transactional outbox, idempotent consumers and a Lambda read path.",
+      "highlights": [
+        "Stock is held, then payment captured; a failed capture releases the hold through a tested compensation path.",
+        "Each step writes its aggregate and outbox row in one DynamoDB transaction, and consumers dedupe on event id.",
+        "Deployable with Terraform (VPC, MSK Serverless, ECS Fargate, Lambda) or an AWS SAM template."
+      ],
+      "technologies": [
+        "Java 21",
+        "Spring Boot",
+        "Kafka",
+        "DynamoDB",
+        "AWS Lambda",
+        "Terraform"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/cloud-order-processing-system"
+      },
+      "image": "assets/images/projects/cloud-order-processing-system.svg"
+    },
+    {
+      "name": "enterprise-customer-management-platform",
+      "category": "Full-stack / CRM",
+      "description": "A B2B CRM with accounts, contacts, interactions and a deal pipeline, built as a Spring Boot 3.3 API, a React 18 + TypeScript SPA and MySQL 8, with Terraform for AWS ECS Fargate.",
+      "highlights": [
+        "Two-level authorization: route-level role rules plus a service-layer ownership check, so a sales rep edits only their own records.",
+        "15-minute JWT access tokens and rotating refresh tokens that revoke the whole chain when one is replayed.",
+        "Pipeline dashboard from nine SQL aggregates behind a 60-second cache."
+      ],
+      "technologies": [
+        "Java 21",
+        "Spring Boot",
+        "React",
+        "TypeScript",
+        "MySQL",
+        "Terraform"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/enterprise-customer-management-platform"
+      },
+      "image": "assets/images/projects/enterprise-customer-management-platform.svg"
+    },
+    {
+      "name": "planprice",
+      "category": "Cloud / FinOps",
+      "description": "Monthly AWS cost estimates and cost diffs for Terraform plans, computed offline from a pinned AWS price snapshot, with Markdown output ready to post on a pull request.",
+      "highlights": [
+        "Maps EC2, EBS, RDS, S3, NAT, ELB and Lambda resources to billable components; anything unpriced is listed, never treated as $0.",
+        "A CI gate exits non-zero when the monthly increase passes a dollar or percent threshold.",
+        "95.1% coverage of internal packages, with fuzz and property tests for every parser."
+      ],
+      "technologies": [
+        "Go",
+        "Terraform",
+        "AWS Pricing",
+        "CLI"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/planprice"
+      },
+      "image": "assets/images/projects/planprice.svg"
+    },
+    {
+      "name": "pipeline-guard",
+      "category": "DevSecOps",
+      "description": "A shift-left security gate for CI that scans container images and infrastructure-as-code on every pull request, scores the findings against a threshold, and blocks the merge.",
+      "highlights": [
+        "Normalizes Trivy, Dockerfile, Terraform plan and Kubernetes findings into one severity-weighted score.",
+        "Posts a Markdown PR comment per finding and can commit mechanical fixes to an auto-fix branch.",
+        "Packaged as a GitHub Action and a CLI, covered by 65 tests."
+      ],
+      "technologies": [
+        "Python",
+        "Trivy",
+        "Terraform",
+        "Kubernetes",
+        "GitHub Actions"
+      ],
+      "links": {
+        "source": "https://github.com/KPatelce/pipeline-guard"
+      },
+      "image": "assets/images/projects/pipeline-guard.svg"
+    },
+    {
       "name": "gatekeep",
       "category": "Security / Identity proxy",
       "description": "A BeyondCorp-style identity-aware reverse proxy in Go. Every request is authorized on who is calling, from what device and what it asks for, using OIDC with PKCE and CEL policies.",

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-07 minirun launch pipeline</title>
+<title>PN-11 minirun launch pipeline</title>
 <desc>Parent process builds a launch plan, re-executes into new namespaces, and the child sets up the root filesystem, drops privileges, applies seccomp and calls execve.</desc>
 <defs>
 <style>text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:.06em;fill:#ffffff}.m{font-size:10px}.s{fill-opacity:.7}.a{fill:#FF6B6B}.n{font-size:12px}.l{fill:#0a0e27;stroke:#ffffff;stroke-opacity:.6;stroke-width:1}.c{fill:none;stroke:#ffffff;stroke-opacity:.4;stroke-width:1}.k{fill:#0a0e27;stroke:#FF6B6B;stroke-opacity:.8;stroke-width:1}</style>
@@ -14,7 +14,7 @@
 <rect width="640" height="360" fill="url(#g80)"/>
 
 <rect x="16" y="16" width="608" height="24" class="l"/>
-<text x="28" y="32" class="m">PN-07 · MINIRUN · <tspan class="a">LAUNCH PIPELINE &amp; ISOLATION</tspan></text>
+<text x="28" y="32" class="m">PN-11 · MINIRUN · <tspan class="a">LAUNCH PIPELINE &amp; ISOLATION</tspan></text>
 
 <rect x="16" y="52" width="270" height="250" class="c"/>
 <text x="28" y="66" class="s">PARENT · HOST NAMESPACES</text>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-05 tailsample: tail-based trace sampler blueprint</title>
+<title>PN-09 tailsample: tail-based trace sampler blueprint</title>
 <desc>Blueprint of OTLP ingest, bounded queues, sampler core with trace buffer, policy engine and decision cache, and export path to a downstream OTLP endpoint.</desc>
 <defs>
 <pattern id="m" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#fff" stroke-opacity="0.05"/></pattern>
@@ -24,7 +24,7 @@ text{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;font-size:9
 <rect width="640" height="360" fill="url(#M)"/>
 
 <rect class="b" x="16" y="16" width="608" height="24"/>
-<text class="t" x="28" y="32">PN-05 · TAILSAMPLE · TAIL-BASED TRACE SAMPLER</text>
+<text class="t" x="28" y="32">PN-09 · TAILSAMPLE · TAIL-BASED TRACE SAMPLER</text>
 
 <rect class="b" x="16" y="68" width="100" height="36"/>
 <text class="c" x="66" y="90">OTLP clients</text>

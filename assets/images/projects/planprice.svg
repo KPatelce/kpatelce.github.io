@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <title>PN-03 planprice schematic</title>
+  <desc>Blueprint schematic: a Terraform plan is mapped to billable AWS components, priced against an embedded price snapshot, and estimated or diffed into a table, PR Markdown, JSON or a CI gate.</desc>
+  <defs>
+    <pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0 H0 V16" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0 H0 V80" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1"/>
+    </pattern>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#ffffff" fill-opacity="0.7"/>
+    </marker>
+    <marker id="r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#FF6B6B"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "IBM Plex Mono", SFMono-Regular, Consolas, monospace; letter-spacing: 0.6px; text-transform: uppercase; fill: #ffffff; }
+    .s { font-size: 9px; fill-opacity: 0.7; }
+    .l { font-size: 10px; }
+    .k { fill: #FF6B6B; }
+    .b { fill: none; stroke: #ffffff; stroke-opacity: 0.6; }
+    .c { fill: none; stroke: #FF6B6B; stroke-opacity: 0.9; }
+    .w { fill: none; stroke: #ffffff; stroke-opacity: 0.7; }
+    .wc { fill: none; stroke: #FF6B6B; }
+  </style>
+
+  <rect x="0" y="0" width="640" height="360" fill="#0a0e27"/>
+  <rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+  <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+
+  <rect x="16" y="16" width="608" height="26" class="b"/>
+  <text x="28" y="33" class="l">PN-03 · PLANPRICE · OFFLINE AWS COST DIFF FOR TERRAFORM</text>
+
+  <rect x="16" y="72" width="136" height="72" class="b"/>
+  <text x="28" y="92" class="l">PLAN.JSON</text>
+  <text x="28" y="110" class="s">terraform show</text>
+  <text x="28" y="124" class="s">-json</text>
+
+  <rect x="168" y="72" width="136" height="72" class="b"/>
+  <text x="180" y="92" class="l">MAPPERS</text>
+  <text x="180" y="110" class="s">EC2 · EBS · RDS</text>
+  <text x="180" y="124" class="s">S3 · NAT · ELB · λ</text>
+
+  <rect x="320" y="72" width="136" height="72" class="b"/>
+  <text x="332" y="92" class="l">PRICE SNAPSHOT</text>
+  <text x="332" y="110" class="s">7,587 prices</text>
+  <text x="332" y="124" class="s">embedded, pinned</text>
+
+  <rect x="472" y="72" width="136" height="72" class="c"/>
+  <text x="484" y="92" class="l k">ESTIMATE</text>
+  <text x="484" y="110" class="s">exact money</text>
+  <text x="484" y="124" class="s">diff by stable key</text>
+
+  <path d="M152 108 H166" class="w" marker-end="url(#a)"/>
+  <path d="M304 108 H318" class="w" marker-end="url(#a)"/>
+  <path d="M456 108 H470" class="w" marker-end="url(#a)"/>
+
+  <path d="M540 144 V172 M84 172 H540" class="wc"/>
+  <path d="M84 172 V194" class="wc" marker-end="url(#r)"/>
+  <path d="M236 172 V194" class="wc" marker-end="url(#r)"/>
+  <path d="M388 172 V194" class="wc" marker-end="url(#r)"/>
+  <path d="M540 172 V194" class="wc" marker-end="url(#r)"/>
+
+  <rect x="16" y="196" width="136" height="72" class="b"/>
+  <text x="28" y="216" class="l">TABLE</text>
+  <text x="28" y="234" class="s">per resource</text>
+  <text x="28" y="248" class="s">per component</text>
+
+  <rect x="168" y="196" width="136" height="72" class="c"/>
+  <text x="180" y="216" class="l k">PR MARKDOWN</text>
+  <text x="180" y="234" class="s">+$3,193.07 / mo</text>
+  <text x="180" y="248" class="s">+624.0%</text>
+
+  <rect x="320" y="196" width="136" height="72" class="b"/>
+  <text x="332" y="216" class="l">JSON</text>
+  <text x="332" y="234" class="s">unpriced items</text>
+  <text x="332" y="248" class="s">listed, never $0</text>
+
+  <rect x="472" y="196" width="136" height="72" class="b"/>
+  <text x="484" y="216" class="l">CI GATE</text>
+  <text x="484" y="234" class="s">exit 3 above</text>
+  <text x="484" y="248" class="s">$ or % threshold</text>
+
+  <rect x="16" y="296" width="608" height="36" class="b"/>
+  <text x="28" y="318" class="s">GO · 95.1% COVERAGE OF INTERNAL/ · 93 TEST FUNCTIONS · FUZZ AND PROPERTY TESTS</text>
+</svg>

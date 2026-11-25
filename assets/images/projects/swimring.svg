@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-04 swimring schematic</title>
+<title>PN-08 swimring schematic</title>
 <desc>Block diagram of a swimring node: cache, ring and SWIM layers above a transport mux, which runs over UDP or a simulated network. Readouts show quorum N/W/R 3/2/2 and an 80% coverage gate.</desc>
 <defs>
 <pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
@@ -21,7 +21,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
 
 <rect x="16" y="16" width="608" height="24" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1"/>
-<text x="28" y="32" font-size="10">PN-04 · SWIMRING · SWIM + LIFEGUARD MEMBERSHIP, RING &amp; QUORUM CACHE</text>
+<text x="28" y="32" font-size="10">PN-08 · SWIMRING · SWIM + LIFEGUARD MEMBERSHIP, RING &amp; QUORUM CACHE</text>
 
 <rect x="200" y="56" width="424" height="230" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-dasharray="4 3" stroke-width="1"/>
 <text x="212" y="72" font-size="9" fill-opacity="0.7">SWIMRING.NODE</text>

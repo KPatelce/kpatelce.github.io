@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-02 previewd: PR-scoped preview environment controller schematic</title>
+<title>PN-06 previewd: PR-scoped preview environment controller schematic</title>
 <desc>Blueprint schematic: GitHub pull_request webhook feeds a webhook receiver, intake and PreviewEnvironment spec into the kube-apiserver. The reconciler uses a pure lifecycle state machine, a renderer, an SCM reporter and an orphan collector. Readouts: 11 objects per namespace, 72h default TTL, 1 namespace per PR.</desc>
 <defs>
 <style>
@@ -29,7 +29,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#m)"/>
 
 <rect x="16" y="16" width="608" height="24" class="w"/>
-<text class="t h" x="28" y="32">PN-02 · PREVIEWD · PR-SCOPED PREVIEW ENVIRONMENT CONTROLLER</text>
+<text class="t h" x="28" y="32">PN-06 · PREVIEWD · PR-SCOPED PREVIEW ENVIRONMENT CONTROLLER</text>
 
 <rect x="168" y="56" width="300" height="216" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4 3"/>
 <text class="t s" x="178" y="70">PREVIEWD</text>

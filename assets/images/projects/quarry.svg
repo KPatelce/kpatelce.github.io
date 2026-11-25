@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-03 quarry: SQL query engine pipeline</title>
+<title>PN-07 quarry: SQL query engine pipeline</title>
 <desc>Blueprint schematic of the quarry pipeline: SQL text through lexer, parser, binder, optimizer rules, physical planner and Arrow operators over memory, CSV and Parquet, with catalog statistics and two key numbers.</desc>
 <defs>
 <style>
@@ -18,7 +18,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#mj)"/>
 
 <rect x="16" y="16" width="608" height="22" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1"/>
-<text x="26" y="31" class="t">PN-03 · QUARRY · SQL ENGINE PIPELINE</text>
+<text x="26" y="31" class="t">PN-07 · QUARRY · SQL ENGINE PIPELINE</text>
 
 <rect x="16" y="60" width="84" height="44" fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6"/>
 <text x="58" y="86" class="t" text-anchor="middle">SQL TEXT</text>

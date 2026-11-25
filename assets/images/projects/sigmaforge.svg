@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-06 sigmaforge schematic</title>
+<title>PN-10 sigmaforge schematic</title>
 <desc>Sigma YAML goes through a strict loader, detection items and a condition parser into an expression tree, pipelines and a simplifier, then four backends and a reference evaluator, checked by differential tests.</desc>
 <defs>
 <style>
@@ -32,7 +32,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
 
 <rect x="16" y="16" width="608" height="24" class="l"/>
-<text x="26" y="32" class="t h">PN-06 · SIGMAFORGE · SIGMA TO SIEM COMPILER</text>
+<text x="26" y="32" class="t h">PN-10 · SIGMAFORGE · SIGMA TO SIEM COMPILER</text>
 
 <rect x="16" y="70" width="120" height="30" class="b"/>
 <text x="76" y="83" class="t">SIGMA YAML</text>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-01 gatekeep request flow</title>
+<title>PN-05 gatekeep request flow</title>
 <desc>Browser to router, OIDC PKCE login, encrypted session cookie, posture store, CEL policy, hash-chained audit log, reverse proxy to upstream with signed identity assertion.</desc>
 <defs>
 <style>.t{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacing:.06em}.l{font-size:10px}.s{font-size:9px}</style>
@@ -14,7 +14,7 @@
 <rect width="640" height="360" fill="url(#M)"/>
 
 <rect x="16" y="16" width="608" height="24" fill="none" stroke="#fff" stroke-opacity=".5"/>
-<text x="28" y="32" class="t l" fill="#fff">PN-01 · GATEKEEP · IDENTITY-AWARE REVERSE PROXY</text>
+<text x="28" y="32" class="t l" fill="#fff">PN-05 · GATEKEEP · IDENTITY-AWARE REVERSE PROXY</text>
 
 <rect x="150" y="64" width="330" height="226" fill="none" stroke="#fff" stroke-opacity=".5"/>
 <text x="162" y="80" class="t l" fill="#fff">GATEKEEP</text>

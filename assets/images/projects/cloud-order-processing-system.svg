@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <title>PN-01 cloud-order-processing-system schematic</title>
+  <desc>Blueprint schematic: the order API stores a pending order with its outbox row, Kafka carries a choreographed saga through inventory and payment, failures compensate by releasing stock, dead letters are replayed by a Lambda, and a Streams-fed Lambda serves the read path.</desc>
+  <defs>
+    <pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0 H0 V16" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <pattern id="major" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0 H0 V80" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="1"/>
+    </pattern>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#ffffff" fill-opacity="0.7"/>
+    </marker>
+    <marker id="r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#FF6B6B"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "IBM Plex Mono", SFMono-Regular, Consolas, monospace; letter-spacing: 0.6px; text-transform: uppercase; fill: #ffffff; }
+    .s { font-size: 9px; fill-opacity: 0.7; }
+    .l { font-size: 10px; }
+    .k { fill: #FF6B6B; }
+    .b { fill: none; stroke: #ffffff; stroke-opacity: 0.6; }
+    .c { fill: none; stroke: #FF6B6B; stroke-opacity: 0.9; }
+    .w { fill: none; stroke: #ffffff; stroke-opacity: 0.7; }
+    .wc { fill: none; stroke: #FF6B6B; }
+  </style>
+
+  <rect x="0" y="0" width="640" height="360" fill="#0a0e27"/>
+  <rect x="0" y="0" width="640" height="360" fill="url(#minor)"/>
+  <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
+
+  <rect x="16" y="16" width="608" height="26" class="b"/>
+  <text x="28" y="33" class="l">PN-01 · CLOUD-ORDER-PROCESSING-SYSTEM · KAFKA SAGA</text>
+
+  <rect x="16" y="72" width="136" height="72" class="b"/>
+  <text x="28" y="92" class="l">ORDER API</text>
+  <text x="28" y="110" class="s">POST → PENDING</text>
+  <text x="28" y="124" class="s">Idempotency-Key</text>
+
+  <rect x="168" y="72" width="136" height="72" class="c"/>
+  <text x="180" y="92" class="l k">ORDER SERVICE</text>
+  <text x="180" y="110" class="s">DynamoDB tx</text>
+  <text x="180" y="124" class="s">+ outbox row</text>
+
+  <rect x="320" y="72" width="136" height="72" class="b"/>
+  <text x="332" y="92" class="l">KAFKA</text>
+  <text x="332" y="110" class="s">orders.created</text>
+  <text x="332" y="124" class="s">choreographed</text>
+
+  <rect x="472" y="72" width="136" height="72" class="b"/>
+  <text x="484" y="92" class="l">INVENTORY</text>
+  <text x="484" y="110" class="s">hold stock</text>
+  <text x="484" y="124" class="s">or release</text>
+
+  <path d="M152 108 H166" class="w" marker-end="url(#a)"/>
+  <path d="M304 108 H318" class="w" marker-end="url(#a)"/>
+  <path d="M456 108 H470" class="w" marker-end="url(#a)"/>
+
+  <path d="M388 144 V172 M84 172 H540" class="wc"/>
+  <path d="M84 172 V194" class="wc" marker-end="url(#r)"/>
+  <path d="M236 172 V194" class="wc" marker-end="url(#r)"/>
+  <path d="M388 172 V194" class="wc" marker-end="url(#r)"/>
+  <path d="M540 172 V194" class="wc" marker-end="url(#r)"/>
+
+  <rect x="16" y="196" width="136" height="72" class="b"/>
+  <text x="28" y="216" class="l">PAYMENT</text>
+  <text x="28" y="234" class="s">capture</text>
+  <text x="28" y="248" class="s">or fail</text>
+
+  <rect x="168" y="196" width="136" height="72" class="c"/>
+  <text x="180" y="216" class="l k">COMPENSATE</text>
+  <text x="180" y="234" class="s">payment failed →</text>
+  <text x="180" y="248" class="s">release the hold</text>
+
+  <rect x="320" y="196" width="136" height="72" class="b"/>
+  <text x="332" y="216" class="l">DLT + LAMBDA</text>
+  <text x="332" y="234" class="s">retry, dead-letter</text>
+  <text x="332" y="248" class="s">capped replay</text>
+
+  <rect x="472" y="196" width="136" height="72" class="b"/>
+  <text x="484" y="216" class="l">READ PATH</text>
+  <text x="484" y="234" class="s">Streams → Lambda</text>
+  <text x="484" y="248" class="s">projection</text>
+
+  <rect x="16" y="296" width="608" height="36" class="b"/>
+  <text x="28" y="318" class="s">JAVA 21 · SPRING BOOT 3.3 · FIVE SERVICES · TERRAFORM OR SAM · 45 UNIT TESTS</text>
+</svg>

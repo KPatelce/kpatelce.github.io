@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-  <title>PN-08 marginbridge schematic</title>
+  <title>PN-12 marginbridge schematic</title>
   <desc>Blueprint schematic: synthetic transaction generator feeds the bridge, elasticity and discount-by-region modules, which feed the demo report. Tests score elasticity against ground truth.</desc>
   <defs>
     <pattern id="minor" width="16" height="16" patternUnits="userSpaceOnUse">
@@ -27,7 +27,7 @@
   <rect x="0" y="0" width="640" height="360" fill="url(#major)"/>
 
   <rect x="16" y="16" width="608" height="26" fill="none" stroke="#ffffff" stroke-opacity="0.6"/>
-  <text x="28" y="33" class="l">PN-08 · MARGINBRIDGE · SYNTHETIC PRICE-VOLUME-MIX &amp; ELASTICITY</text>
+  <text x="28" y="33" class="l">PN-12 · MARGINBRIDGE · SYNTHETIC PRICE-VOLUME-MIX &amp; ELASTICITY</text>
 
   <rect x="36" y="60" width="130" height="36" fill="none" stroke="#FF6B6B" stroke-opacity="0.8"/>
   <text x="101" y="76" font-size="11" text-anchor="middle" class="k">21.4% → 20.8%</text>

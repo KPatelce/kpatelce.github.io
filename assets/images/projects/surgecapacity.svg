@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-09 surgecapacity schematic</title>
+<title>PN-13 surgecapacity schematic</title>
 <desc>Blueprint schematic: arrival profile and triage mix feed a thinned Poisson generator, which feeds a priority-queue simulation loop with a 168-hour roster. The loop outputs waits, breach and LWBS, checked by an analytic M/M/c module. Readouts show p95 4.42h flat, 2.05h shaped, and 1,512 clinician-hours.</desc>
 <defs>
 <style>text{font-family:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;letter-spacing:0.06em;fill:#ffffff;text-transform:uppercase}</style>
@@ -13,7 +13,7 @@
 <rect x="0" y="0" width="640" height="360" fill="url(#mj)"/>
 
 <rect x="16" y="16" width="608" height="28" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1"/>
-<text x="28" y="34" font-size="10">PN-09 · SURGECAPACITY · ED STAFFING SIMULATOR</text>
+<text x="28" y="34" font-size="10">PN-13 · SURGECAPACITY · ED STAFFING SIMULATOR</text>
 
 <g fill="#0a0e27" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1">
 <rect x="32" y="70" width="150" height="52"/>
