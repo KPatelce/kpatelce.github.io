@@ -1,5 +1,5 @@
 /*
- * SlateGit template kit v1: structural styles for what kit.js renders.
+ * Template kit v1: structural styles for what kit.js renders.
  *
  * Every colour, radius, border, shadow and font comes from the ten --kit-* tokens, which a
  * template sets in its own :root. Every selector is wrapped in :where(), so it has no

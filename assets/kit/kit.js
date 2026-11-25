@@ -1,4 +1,4 @@
-/* SlateGit template kit v1 (docs/template-kit/contract.md), a module. Data is untrusted: text
+/* Template kit v1 (docs/template-kit/contract.md), a module. Data is untrusted: text
  * goes in by textContent, URLs pass HREF or SRC, and only DEFAULTS is parsed. */
 const STEMS = 'site hero about experience projects skills education certifications contact';
 const pairs = (s) => Object.fromEntries(s.split(' ').map((p) => p.split(':')));
